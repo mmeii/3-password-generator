@@ -8,7 +8,7 @@ var wantNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 // Write password to the #password input
-function generatePassword() {
+function passwordOption() {
 
   // prompt user for password length - need to be 8 to 128 characters
   var passLength = prompt("How many characters do you want your password to be?");
@@ -19,7 +19,11 @@ function generatePassword() {
       var upperCase = confirm("Do you want to include a uppercase letter?");
       var wantNum = confirm("Do you want to include a number?");
       var specialChar = confirm("Do you want to include a special character?");      
-
+      if (lowerCase || upperCase || wantNum || specialChar) {
+        generatePassword(); 
+      } else {
+        alert("Please select at least one criteria to generate password!");
+      }
       // start random selection for password
 
       var password = generatePassword();
@@ -30,13 +34,17 @@ function generatePassword() {
       } else {
       alert("Password length must between 8 to 128");
     }
-  } 
+} 
+
+function generatePassword() {
+  
+}
 
 
 // Write password to the #password input
 
 function writePassword() {
-  var password = generatePassword();
+  var password = passwordOption();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
