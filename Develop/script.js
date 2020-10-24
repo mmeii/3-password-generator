@@ -1,46 +1,50 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 // arrays for different criteria options
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperCase = lowerCase.toUpperCase();
+var upperCase = ["A", "B", "D", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var wantNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
+
   // prompt user for password length - need to be 8 to 128 characters
-  var passLength = prompt("How many characters do you want your password to be?") {
-    if (passLength >= 8 || passLength <=128) {
-      function
-      // prompt user for lowercase characters
+  var passLength = prompt("How many characters do you want your password to be?");
+    if (passLength >= 8 && passLength <= 128) {
+
+      // password parameters, user confirmation what to choose
       var lowerCase = confirm("Do you want to include a lowercase letter?");
-
-      // prompt user for uppercase characters
       var upperCase = confirm("Do you want to include a uppercase letter?");
-
-      // prompt user for uppercase characters
-      var upperCase = confirm("Do you want to include a uppercase letter?");
-
-      // prompt user for special characters
-      var specialChar = confirm("Do you want to include a special character?");
-
-      // if no for all, alert that must select one type
+      var wantNum = confirm("Do you want to include a number?");
+      var specialChar = confirm("Do you want to include a special character?");      
 
       // start random selection for password
 
       var password = generatePassword();
       var passwordText = document.querySelector("#password");
-
       passwordText.value = password;
-    } else {
+
+      // if no for all, alert that must select one type
+      } else {
       alert("Password length must between 8 to 128");
     }
-  }
+  } 
+
+
+// Write password to the #password input
+
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 }
+
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 
