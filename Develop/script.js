@@ -27,20 +27,22 @@ function passwordOption() {
       wantNum = confirm("Do you want to include a number?");
       specialChar = confirm("Do you want to include a special character?");
 
-      // // console log user criteria selection choices
-      // console.log("lowerCase: " + lowerCase + " upperCase: " + upperCase + " wantNum: " + wantNum + " specialChar: " + specialChar);
+      // console log user criteria selection choices
+      console.log("password length: " + passLength + "\nlowerCase: " + lowerCase + "\nupperCase: " + upperCase + "\nwantNum: " + wantNum + "\nspecialChar: " + specialChar);
 
+      // when one of the criteria is selected, run generatePassword function
       if (lowerCase || upperCase || wantNum || specialChar) {
         generatePassword();
+
+      // if no for all, alert that must select one type
       } else {
         alert("Please select at least one criteria to generate password!");
       }
-      // start random selection for password
 
-      // if no for all, alert that must select one type
+    // alert if password length is not between 8 to 128
     } else {
       alert("Password length must be between 8 to 128!");
-    }
+    }    
 }
 
 // function to generate password after user criterias have been selected
@@ -71,8 +73,8 @@ function generatePassword() {
   var currentLength = password.length;
   var i;
 
-  console.log(password);
-  console.log(passwordsArray);
+  // console.log(password);
+  // console.log(passwordsArray);
 
   for (i = currentLength; i < passLength; i++) {
     password += passwordsArray[getRandomInt(passwordsArray.length)];
@@ -83,7 +85,7 @@ function generatePassword() {
   textarea.value = password;
 }
 
-// function to generate random index from the arrays
+// function to generate random selection from the arrays
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
