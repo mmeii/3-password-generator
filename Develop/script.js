@@ -7,27 +7,28 @@ var upperCaseArray = ["A", "B", "D", "D", "E", "F", "G", "H", "I", "J", "K", "L"
 var wantNumArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialCharArray = [" ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
 
+// declare variables for user criteria selection
 var passLength;
-//user select flag
 var lowerCase;
 var upperCase;
 var wantNum;
 var specialChar;
 
-
+// function for user criteria password option selections
 function passwordOption() {
 
   // prompt user for password length - need to be 8 to 128 characters
   passLength = prompt("How many characters do you want your password to be?");
     if (passLength >= 8 && passLength <= 128) {
 
-      // password parameters, user confirmation what to choose
+      // password parameters, user confirmation what to choose for criteria selection
       lowerCase = confirm("Do you want to include a lowercase letter?");
       upperCase = confirm("Do you want to include a uppercase letter?");
       wantNum = confirm("Do you want to include a number?");
       specialChar = confirm("Do you want to include a special character?");
 
-      console.log("lowerCase: " + lowerCase + " upperCase: " + upperCase + " wantNum: " + wantNum + " specialChar: " + specialChar);
+      // // console log user criteria selection choices
+      // console.log("lowerCase: " + lowerCase + " upperCase: " + upperCase + " wantNum: " + wantNum + " specialChar: " + specialChar);
 
       if (lowerCase || upperCase || wantNum || specialChar) {
         generatePassword();
@@ -38,11 +39,11 @@ function passwordOption() {
 
       // if no for all, alert that must select one type
     } else {
-      alert("Password length must between 8 to 128");
+      alert("Password length must be between 8 to 128!");
     }
 }
 
-// generate password after user criterias have been selected
+// function to generate password after user criterias have been selected
 function generatePassword() {
   var password = "";
   var passwordsArray = [];
@@ -87,6 +88,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+// function to run everything when generate password button is clicked
 function writePassword() {
   passwordOption();
 }
