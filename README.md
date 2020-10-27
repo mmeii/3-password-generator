@@ -21,4 +21,4 @@ This project is designed by OSU coding bootcamp. It is to create a random passwo
 * Deployed: https://mmeii.github.io/3-password-generator/
 
 ## Demo
-![Demo Password Generator](Assets/password-generator-demo.mov)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_fqKaLMaOZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
