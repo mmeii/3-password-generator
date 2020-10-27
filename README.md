@@ -13,7 +13,7 @@ This project is designed by OSU coding bootcamp. It is to create a random passwo
 4. After all prompts are answered, a secured random password is generated matching the selected criteria and displayed in the textbox area.
 
 ## Installation
-1. Download of clone repository
+1. Download or clone repository
 2. Open the main page (index.html) on your brower to view webpage
 
 ## Websites
@@ -21,4 +21,7 @@ This project is designed by OSU coding bootcamp. It is to create a random passwo
 * Deployed: https://mmeii.github.io/3-password-generator/
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_fqKaLMaOZE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![Passoword Generator Demo](Assets/password-generator-demo.gif)
+
+## License
+MIT
