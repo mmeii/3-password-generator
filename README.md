@@ -1,5 +1,5 @@
 # Password Generator
-This project is designed by OSU coding bootcamp. It is to create a random password generator prompted with different criterias using JavaScript. The HTML and CSS is provided.
+This project is designed by OSU coding bootcamp. Given HTML and CSS, create a random password generator prompted with different criterias using JavaScript. 
 
 ## Direction
 1. Click "generate password"

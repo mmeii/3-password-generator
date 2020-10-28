@@ -19,30 +19,30 @@ function passwordOption() {
 
   // prompt user for password length - need to be 8 to 128 characters
   passLength = prompt("How many characters do you want your password to be?");
-    if (passLength >= 8 && passLength <= 128) {
+  if (passLength >= 8 && passLength <= 128) {
 
-      // password parameters, user confirmation what to choose for criteria selection
-      lowerCase = confirm("Do you want to include a lowercase letter?");
-      upperCase = confirm("Do you want to include a uppercase letter?");
-      wantNum = confirm("Do you want to include a number?");
-      specialChar = confirm("Do you want to include a special character?");
+    // password parameters, user confirmation what to choose for criteria selection
+    lowerCase = confirm("Do you want to include a lowercase letter?");
+    upperCase = confirm("Do you want to include a uppercase letter?");
+    wantNum = confirm("Do you want to include a number?");
+    specialChar = confirm("Do you want to include a special character?");
 
-      // console log user criteria selection choices
-      console.log("password length: " + passLength + "\nlowerCase: " + lowerCase + "\nupperCase: " + upperCase + "\nwantNum: " + wantNum + "\nspecialChar: " + specialChar);
+    // console log user criteria selection choices
+    console.log("password length: " + passLength + "\nlowerCase: " + lowerCase + "\nupperCase: " + upperCase + "\nwantNum: " + wantNum + "\nspecialChar: " + specialChar);
 
-      // when one of the criteria is selected, run generatePassword function
-      if (lowerCase || upperCase || wantNum || specialChar) {
-        generatePassword();
+    // when one of the criteria is selected, run generatePassword function
+    if (lowerCase || upperCase || wantNum || specialChar) {
+      generatePassword();
 
-      // if no for all, alert that must select one type
-      } else {
-        alert("Please select at least one criteria to generate password!");
-      }
-
-    // alert if password length is not between 8 to 128
+    // if no for all, alert that must select one type
     } else {
-      alert("Password length must be between 8 to 128!");
-    }    
+      alert("Please select at least one criteria to generate password!");
+    }
+
+  // alert if password length is not between 8 to 128
+  } else {
+    alert("Password length must be between 8 to 128!");
+  }    
 }
 
 // function to generate password after user criterias have been selected
