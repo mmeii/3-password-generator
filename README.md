@@ -20,6 +20,11 @@ This project is designed by OSU coding bootcamp. Given HTML and CSS, create a ra
 * Github: https://github.com/mmeii/3-password-generator
 * Deployed: https://mmeii.github.io/3-password-generator/
 
+## Features
+* HTML
+* CSS
+* JavaScript
+
 ## Demo
 ![Passoword Generator Demo](Assets/password-generator-demo.gif)
 
