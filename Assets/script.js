@@ -34,15 +34,15 @@ function passwordOption() {
     if (lowerCase || upperCase || wantNum || specialChar) {
       generatePassword();
 
-    // if no for all, alert that must select one type
+      // if no for all, alert that must select one type
     } else {
       alert("Please select at least one criteria to generate password!");
     }
 
-  // alert if password length is not between 8 to 128
+    // alert if password length is not between 8 to 128
   } else {
     alert("Password length must be between 8 to 128!");
-  }    
+  }
 }
 
 // function to generate password after user criterias have been selected
@@ -66,7 +66,8 @@ function generatePassword() {
   }
 
   if (specialChar == true) {
-    password += specialCharArray[getRandomInt(specialCharArray.length)];
+    var randomIndex = getRandomInt(specialCharArray.length);
+    password += specialCharArray[randomIndex];
     passwordsArray = passwordsArray.concat(specialCharArray);
   }
 
